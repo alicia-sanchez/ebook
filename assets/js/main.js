@@ -39,3 +39,74 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
+
+
+/* == HOME SWIPPER == */
+let swiperHome = new Swiper('.home_swiper', {
+    loop: true,
+    spaceBetween: 0,
+    grabCursor: true,
+    slidesPerView: 'auto',
+    centeredSlides: 'auto',
+    
+
+    autoplay: {
+        display:3000,
+        disableOnInteraction: false,
+    },
+
+    breakpoints: {
+        1220: {
+            spaceBetween: -38,
+        }
+    }
+});
+
+/* == NEWBOOK SWIPPER == */
+let swiperNewBook = new Swiper('.newBook_swiper', {
+    loop: true,
+    spaceBetween: 16,
+    grabCursor: true,
+    slidesPerView: 'auto',
+    centeredSlides: 'auto',
+    
+
+    autoplay: {
+        display:3000,
+        disableOnInteraction: false,
+    },
+
+    breakpoints: {
+        1660: {
+            slidesPerView: 4,
+            centeredSlides: false,
+        }
+    }
+});
+
+/* == TESTIMONIAL SWIPER == */
+let swiperTestimonial = new Swiper('.testimonial_swiper', {
+    loop: true,
+    spaceBetween: 16,
+    grabCursor: true,
+    slidesPerView: 'auto',
+    centeredSlides: 'auto',
+    
+
+    breakpoints: {
+        1660: {
+            slidesPerView: 3,
+            centeredSlides: false,
+        }
+    }
+});
+
+
+/* == SHADOW HEADER == */
+const shadowHeader = () =>{
+    const header = document.getElementById('header')
+    this.scrollY >= 50 ? header.classList.add('shadow-header') 
+                        : header.classList.remove('shadow-header')
+}
+window.addEventListener('scroll', shadowHeader)
+

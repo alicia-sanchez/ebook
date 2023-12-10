@@ -7,6 +7,9 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <!--CDN REMIX ICONS-->
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+     <!--CDN SWIPER CSS-->
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css" />
+
     <title>BookShop</title>
 </head>
 <body>
@@ -20,7 +23,7 @@
             <div class="nav_menu" id="nav-menu">
                 <ul class="nav_list">
                     <li class="nav_item">
-                        <a href="#" class="nav_link">
+                        <a href="#home" class="nav_link active_link">
                             <i class="ri-home-line"></i>
                             <span>Accueil</span>
                         </a>
@@ -28,25 +31,26 @@
                 </ul>
 
                     <li class="nav_item">
-                        <a href="#" class="nav_link">
+                        <a href="#newBook" class="nav_link">
                             <i class="ri-skip-up-line"></i>
-                            <span>Top ventes</span>
-                        </a>
-                    </li>
-
-                    <li class="nav_item">
-                        <a href="#" class="nav_link">
-                            <i class="ri-chat-new-line"></i>
                             <span>Nouveautés</span>
                         </a>
                     </li>
 
                     <li class="nav_item">
-                        <a href="#" class="nav_link">
+                        <a href="#discount" class="nav_link">
                             <i class="ri-price-tag-3-line"></i>
                             <span>Promotions</span>
                         </a>
                     </li>
+
+                    <li class="nav_item">
+                        <a href="#testimonial" class="nav_link">
+                            <i class="ri-chat-new-line"></i>
+                            <span>Nos avis</span>
+                        </a>
+                    </li>
+
             </div>
 
             <div class="nav_action" id="nav-toggle">
@@ -56,8 +60,6 @@
                 <!--BTN LOGIN-->
                     <i class="ri-user-line login-toggle" id="login-button"></i>
     
-                <!--BTN THEME-->
-                <i class="ri-moon-line theme-toggle"></i>
             </div>
         </nav>
     </header>
@@ -101,7 +103,7 @@
     </div>
 
     <main class="main">
-    <!--JS-->
+    <!--HOME-->
     <section class="home section" id="home">
         <div class="home_container contianer grid">
             <div class="home_data">
@@ -110,28 +112,344 @@
                 <a href="#" class="home_button_discover">Découvrir</a>
             </div>
             <div class="home_images">
-                <div class="home_swip swiper"></div>
-                <article class="home_article">
-                    <img src="assets/img/home-book-1.png" alt="image_book" class="home_img">
-                </article>
+                <div class="home_swiper swiper">
+                    <div class="swiper-wrapper">
+                        <article class="home_article swiper-slide">
+                            <img src="assets/img/home-book-1.png" alt="image_book" class="home_img">
+                        </article>
+        
+                        <article class="home_article swiper-slide">
+                            <img src="assets/img/home-book-2.png" alt="image_book" class="home_img">
+                        </article>
+        
+                        <article class="home_article swiper-slide">
+                            <img src="assets/img/home-book-3.png" alt="image_book" class="home_img">
+                        </article>
+                        
+                        <article class="home_article swiper-slide">
+                            <img src="assets/img/home-book-4.png" alt="image_book" class="home_img">
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--HOME SERVICES-->
+    <section class="services section">
+        <div class="services_container grid">
+            <article class="services_card">
+                <i class="ri-truck-line"></i>
+                <h3 class="services_title">Livrison gratuite</h3>
+                <p class="services_description">
+                    à partir de 50 euros d'achat
+                </p>
+            </article>
 
-                <article class="home_article">
-                    <img src="assets/img/home-book-2.png" alt="image_book" class="home_img">
-                </article>
+            <article class="services_card">
+                <i class="ri-lock-line"></i>
+                <h3 class="services_title">Paiement sécurisé</h3>
+                <p class="services_description">
+                    en 3 ou 4 fois sans frais par CB
+                </p>
+            </article>
 
-                <article class="home_article">
-                    <img src="assets/img/home-book-3.png" alt="image_book" class="home_img">
-                </article>
-                
-                <article class="home_article">
-                    <img src="assets/img/home-book-4.png" alt="image_book" class="home_img">
-                </article>
+            <article class="services_card">
+                <i class="ri-arrow-go-back-line"></i>
+                <h3 class="services_title">Retours gratuits</h3>
+                <p class="services_description">
+                    15 jours ouvrés
+                </p>
+            </article>
+        </div>
+    </section>
+     <!--HOME NEW BOOK-->
+     <section class="newBook section" id="newBook">
+        <p class="featured_description">- Ca vient de sortir !</p>
+        <h2 class="newBook_title_container">Les nouveautés livres</h2>
+        <div class="newBook_container">
+            <div class="newBook_swiper swiper">
+                <div class="swiper-wrapper">
+                    <article class="newBook_card swiper-slide">
+                        <p class="featured_newBook">nouveauté</p>
+                        <img src="assets/img/book-1.png" alt="image" class="newBook_img">
+                        <h2 class="newBook_title">The Lord of the Kings</h2>
+                        <span class="newBook_author">Sarah Geston</span>
+                        <div class="newBook_prices">
+                            <span class="newBook_discount">12,99€</span>
+                            <span class="newBook_actions">
+                                <button><i class="ri-shopping-cart-2-line"></i></button>
+                                <button><i class="ri-heart-line"></i></button>
+                                <button><i class="ri-heart-fill"></i></button>
+                            </span>
+                        </div>
+                    </article>
+    
+                    <article class="newBook_card swiper-slide">
+                        <p class="featured_newBook">nouveauté</p>
+                        <img src="assets/img/book-2.png" alt="image" class="newBook_img">
+                        <h2 class="newBook_title">The Lord of the Kings</h2>
+                        <span class="newBook_author">Sarah Geston</span>
+                        <div class="newBook_prices">
+                            <span class="newBook_discount">12,99€</span>
+                            <span class="newBook_actions">
+                                <button><i class="ri-shopping-cart-2-line"></i></button>
+                                <button><i class="ri-heart-line"></i></button>
+                                <button><i class="ri-heart-fill"></i></button>
+                            </span>
+                        </div>
+                    </article>
+    
+                    <article class="newBook_card swiper-slide">
+                        <p class="featured_newBook">nouveauté</p>
+                        <img src="assets/img/book-3.png" alt="image" class="newBook_img">
+                        <h2 class="newBook_title">The Lord of the Kings</h2>
+                        <span class="newBook_author">Sarah Geston</span>
+                        <div class="newBook_prices">
+                            <span class="newBook_discount">12,99€</span>
+                            <span class="newBook_actions">
+                                <button><i class="ri-shopping-cart-2-line"></i></button>
+                                <button><i class="ri-heart-line"></i></button>
+                                <button><i class="ri-heart-fill"></i></button>
+                            </span>
+                        </div>
+                    </article>
+    
+                    <article class="newBook_card swiper-slide">
+                        <p class="featured_newBook">nouveauté</p>
+                        <img src="assets/img/book-4.png" alt="image" class="newBook_img">
+                        <h2 class="newBook_title">The Lord of the Kings</h2>
+                        <span class="newBook_author">Sarah Geston</span>
+                        <div class="newBook_prices">
+                            <span class="newBook_discount">12,99€</span>
+                            <span class="newBook_actions">
+                                <button><i class="ri-shopping-cart-2-line"></i></button>
+                                <button><i class="ri-heart-line"></i></button>
+                                <button><i class="ri-heart-fill"></i></button>
+                            </span>
+                        </div>
+                    </article>
+    
+                    <article class="newBook_card swiper-slide">
+                        <p class="featured_newBook">nouveauté</p>
+                        <img src="assets/img/book-5.png" alt="image" class="newBook_img">
+                        <h2 class="newBook_title">The Lord of the Kings</h2>
+                        <span class="newBook_author">Sarah Geston</span>
+                        <div class="newBook_prices">
+                            <span class="newBook_discount">12,99€</span>
+                            <span class="newBook_actions">
+                                <button><i class="ri-shopping-cart-2-line"></i></button>
+                                <button><i class="ri-heart-line"></i></button>
+                                <button><i class="ri-heart-fill"></i></button>
+                            </span>
+                        </div>
+                    </article>
+    
+                    <article class="newBook_card swiper-slide">
+                        <p class="featured_newBook">nouveauté</p>
+                        <img src="assets/img/book-6.png" alt="image" class="newBook_img">
+                        <h2 class="newBook_title">The Lord of the Kings</h2>
+                        <span class="newBook_author">Sarah Geston</span>
+                        <div class="newBook_prices">
+                            <span class="newBook_discount">12,99€</span>
+                            <span class="newBook_actions">
+                                <button><i class="ri-shopping-cart-2-line"></i></button>
+                                <button><i class="ri-heart-line"></i></button>
+                                <button><i class="ri-heart-fill"></i></button>
+                            </span>
+                        </div>
+                    </article>
+    
+                    <article class="newBook_card swiper-slide">
+                        <p class="featured_newBook">nouveauté</p>
+                        <img src="assets/img/book-7.png" alt="image" class="newBook_img">
+                        <h2 class="newBook_title">The Lord of the Kings</h2>
+                        <span class="newBook_author">Sarah Geston</span>
+                        <div class="newBook_prices">
+                            <span class="newBook_discount">12,99€</span>
+                            <span class="newBook_actions">
+                                <button><i class="ri-shopping-cart-2-line"></i></button>
+                                <button><i class="ri-heart-line"></i></button>
+                                <button><i class="ri-heart-fill"></i></button>
+                            </span>
+                        </div>
+                    </article>
+    
+                    <article class="newBook_card swiper-slide">
+                        <p class="featured_newBook">nouveauté</p>
+                        <img src="assets/img/book-8.png" alt="image" class="newBook_img">
+                        <h2 class="newBook_title">The Lord of the Kings</h2>
+                        <span class="newBook_author">Sarah Geston</span>
+                        <div class="newBook_prices">
+                            <span class="newBook_discount">12,99€</span>
+                            <span class="newBook_actions">
+                                <button><i class="ri-shopping-cart-2-line"></i></button>
+                                <button><i class="ri-heart-line"></i></button>
+                                <button><i class="ri-heart-fill"></i></button>
+                            </span>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+        </section>
+        <!--DISCOUNT-->
+        <section class="discount section" id="discount">
+        <div class="discount_container grid">
+            <div class="discount_data">
+                <h2 class="discount_title">Offres & bons plans</h2>
+                <p class="discount_description">
+                    Profitez des offres livres et ebooks du moment pour faire le plein de nouvelles lectures à prix mini !
+                </p>
+                <a href="#" class="button">Commandez</a>
+            </div>
+            <div class="discount_images">
+                <img src="assets/img/discount-book-1.png" alt="image" class="discount-1">
+                <img src="assets/img/discount-book-2.png" alt="image" class="discount-2">
+            </div>
+        </div>
+     </section>
+    <!--JOINS-->
+    <section class="join section">
+        <div class="join_container">
+            <img src="assets/img/join-bg.jpg" alt="image" class="join_bg">
+            <h2 class="join_title">Inscrivez-vous pour découvrir
+                toutes nos offres !</h2>
+            <form action="" class="join_form">
+                <input type="email" placeholder="Entrez votre email" class="join_input">
+                <button type="submit" class="join_button">Je m'inscris</button>
+            </form>
+        </div>
+    </section>
+    <!--TESTIMONIALS-->
+    <section class="testimonial section" id="testimonial">
+        <h2 class="section_title">Les avis</h2>
+        <div class="testimonial_container">
+            <div class="testimonial_swiper swiper">
+                <div class="swiper-wrapper">
+                    <article class="testimonial_card swiper-slide">
+                        <img src="assets/img/testimonial-perfil-1.png" alt="image" class="testimonial_img">
+                        <div class="testimonial_data">
+                            <h2 class="testimonial_title">Rial Loz</h2>
+                            <p class="testimonial_description">
+                                Très bon site pour acheter des livres, il y a des bonnes remises, l'achat est très simple.
+                            </p>
+                            <div class="testimonial_stars">
+                                <i class="ri-star-line"></i>
+                                <i class="ri-star-line"></i>
+                                <i class="ri-star-line"></i>
+                                <i class="ri-star-line"></i>
+                                <i class="ri-star-half-line"></i>
+                            </div>
+                        </div>
+                    </article>
+    
+                    <article class="testimonial_card swiper-slide">
+                        <img src="assets/img/testimonial-perfil-2.png" alt="image" class="testimonial_img">
+                        <div class="testimonial_data">
+                            <h2 class="testimonial_title">Rial Loz</h2>
+                            <p class="testimonial_description">
+                                Très bon site pour acheter des livres, il y a des bonnes remises, l'achat est très simple.
+                            </p>
+                            <div class="testimonial_stars">
+                                <i class="ri-star-line"></i>
+                                <i class="ri-star-line"></i>
+                                <i class="ri-star-line"></i>
+                                <i class="ri-star-line"></i>
+                                <i class="ri-star-half-line"></i>
+                            </div>
+                        </div>
+                    </article>
+    
+                    <article class="testimonial_card swiper-slide">
+                        <img src="assets/img/testimonial-perfil-3.png" alt="image" class="testimonial_img">
+                        <div class="testimonial_data">
+                            <h2 class="testimonial_title">Rial Loz</h2>
+                            <p class="testimonial_description">
+                                Très bon site pour acheter des livres, il y a des bonnes remises, l'achat est très simple.
+                            </p>
+                            <div class="testimonial_stars">
+                                <i class="ri-star-line"></i>
+                                <i class="ri-star-line"></i>
+                                <i class="ri-star-line"></i>
+                                <i class="ri-star-line"></i>
+                                <i class="ri-star-half-line"></i>
+                            </div>
+                        </div>
+                    </article>
+                </div>
             </div>
         </div>
     </section>
     </main>
 
+    <div class="footer_data grid">
+        <div class="footer_section">
+            <h3 class="footer_title">Mieux nous connaitre</h3>
+            <ul class="footer_links">
+                <li class="">
+                    <a href="" class="footer_link">Qui sommes-nous ?</a>
+                </li>
+                <li class="">
+                    <a href="" class="footer_link">Services & avantages</a>
+                </li>
+                <li class="">
+                    <a href="" class="footer_link">Nous rejoindre</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="footer_section">
+            <h3 class="footer_title">Besoin d'aide ?</h3>
+            <ul class="footer_links">
+                <li class="">
+                    <a href="" class="footer_link">Mode de paiement</a>
+                </li>
+                <li class="">
+                    <a href="" class="footer_link">Infos livraison</a>
+                </li>
+                <li class="">
+                    <a href="" class="footer_link">Retours & remboursements</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="footer_section">
+            <h3 class="footer_title">Autour du numérique</h3>
+            <ul class="footer_links">
+                <li class="">
+                    <a href="" class="footer_link">Découvrir la lecture numérique</a>
+                </li>
+                <li class="">
+                    <a href="" class="footer_link">Aide numérique</a>
+                </li>
+                <li class="">
+                    <a href="" class="footer_link">Offrir un e-book</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="footer_section">
+            <h3 class="footer_title">Nos réseaux sociaux</h3>
+            <ul class="footer_links_social">
+                <li class="">
+                    <a href="" class="footer_link social"><i class="ri-facebook-fill"></i></a>
+                </li>
+                <li class="">
+                    <a href="" class="footer_link social"><i class="ri-instagram-line"></i></a>
+                </li>
+                <li class="">
+                    <a href="" class="footer_link social"><i class="ri-twitter-fill"></i></a>
+                </li>
+            </ul>
+        </div>
+            </div>
+        </div>
+    </footer>
+
     <!--JS-->
+    <!--SWIPPER JS-->
+    <script src="assets/js/swiper-bundle.min.js"></script>
+    <!--SCRIPT JS-->
     <script src="assets/js/main.js"></script>
 </body>
 </html>
